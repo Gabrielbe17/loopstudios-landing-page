@@ -1,0 +1,38 @@
+@use '../abstracts/index' as *;
+
+footer{
+    background-color: $Black;
+}
+.footer{
+    text-align: center;
+    padding: 3em 2em;
+
+    &__info{
+        ul{
+            display: flex;
+            flex-direction: column;
+            margin: 2em 0;
+            gap: 1.5em;
+            @media (min-width:$desktop) {
+                flex-direction: row;
+            }
+        }
+        @media (min-width:$desktop) {
+            @include flex(column, flex-start);
+            .logo{align-self: flex-start;}
+        }
+    }
+    // Social Links Section
+    &__social{
+        color: $White;
+        &--links{
+            @include flex(row, center);
+            gap: 1.35em;
+        }
+    }
+
+    // Responsive
+   @media (min-width: $desktop){
+       @include flex(row, space-between);
+   } 
+}
