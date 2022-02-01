@@ -48,9 +48,13 @@ ul{
     padding-left: 0;
     list-style: none;
     
-    & >li{
+    li{
         color: $White;
         cursor: pointer;
+        font-size: clamp(1rem, 2vw, 1.15rem);
+        position: relative;
+
+        // Active states
     }
 }
 .img{

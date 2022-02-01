@@ -10,6 +10,17 @@ main {
     & > *{
         padding: 2.5em 0;
     }
+
+    //All the anchor tags
+    a:visited{
+        background-color: $White;
+    }
+
+    .span-2{
+        @media (min-width:$tablet) {
+            display: none;
+        }
+    }
 }   
     
 .main__bio{
@@ -69,15 +80,19 @@ main {
         letter-spacing: .1em;
         font-weight: 600;  
         font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color .3s ease;
+
+        &:hover{
+            background-color: $Black;
+            a{
+                color: $White;
+            }
+        }
     }
 
     .span-1{
         @media (max-width: calc($tablet - 1px)) {
-            display: none;
-        }
-    }
-    .span-2{
-        @media (min-width:$tablet) {
             display: none;
         }
     }
@@ -151,10 +166,5 @@ main {
             .fisheye{background: url("#{$fisheye-desktop}");}
         }   
     }
-
-
-
-
-
 }
 
