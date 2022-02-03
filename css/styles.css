@@ -5,6 +5,7 @@ html {
 
 body {
   overflow-x: hidden;
+  position: relative;
 }
 
 section {
@@ -57,7 +58,21 @@ ul li {
   color: white;
   cursor: pointer;
   font-size: clamp(1rem, 2vw, 1.15rem);
+}
+ul li::after {
+  content: "";
+  display: block;
+  width: 0;
+  border-radius: 2em;
+  height: 0.125em;
+  margin: 0 auto;
   position: relative;
+  top: 0.7em;
+  background-color: white;
+}
+ul li:hover::after {
+  width: 100%;
+  transition: width 0.3s ease-in-out;
 }
 
 .img {
@@ -204,7 +219,7 @@ main {
   background-color: black;
 }
 .main__creation--span:hover a {
-  color: white;
+  color: #fff;
 }
 @media (max-width: 709px) {
   .main__creation .span-1 {
@@ -322,6 +337,7 @@ footer {
 }
 .footer__info ul {
   display: flex;
+  align-items: center;
   flex-direction: column;
   margin: 2em 0;
   gap: 1.5em;
@@ -351,6 +367,24 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1.35em;
+}
+.footer i {
+  cursor: pointer;
+}
+.footer i::after {
+  content: "";
+  display: block;
+  width: 0;
+  border-radius: 2em;
+  height: 0.1em;
+  margin: 0 auto;
+  position: relative;
+  top: 0.25em;
+  background-color: white;
+}
+.footer i:hover::after {
+  width: 100%;
+  transition: width 0.3s ease-in-out;
 }
 @media (min-width: 1200px) {
   .footer {
