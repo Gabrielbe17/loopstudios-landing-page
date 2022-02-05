@@ -213,6 +213,7 @@ main {
   font-weight: 600;
   font-size: 1.2rem;
   cursor: pointer;
+  color: black;
   transition: background-color 0.3s ease;
 }
 .main__creation--span:hover {
